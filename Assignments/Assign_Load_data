@@ -1,0 +1,54 @@
+---- ConsumerComplaints_new.csv file
+
+USE warehouse TEST_WAREHOUSE;
+USE DATABASE "DEMO";
+USE SCHEMA "PUBLIC";
+CREATE OR REPLACE TABLE KI_CONSUMER_TABLE
+(Date_Received string,
+ Product_Name VARCHAR(50),
+ Sub_Product VARCHAR(50),
+ Issue VARCHAR(100),
+ Sub_Issue VARCHAR(100),
+ Consumer_Complaint_Narrative string,
+ Company_Public_Response VARCHAR(150),
+ Company CHAR(60),
+ State_Name	CHAR(5),
+ Zip_Code string,
+ Tags CHAR(50),
+ Consumer_Consent_Provided CHAR(30),
+ Submitted_via CHAR(15),
+ Date_Sent_to_Company string,
+ Company_Response_to_Consumer CHAR(40), 	
+ Timely_Response CHAR(4),
+ Consumer_Disputed CHAR(3),
+ Complaint_ID NUMBER(12,0) NOT NULL PRIMARY KEY
+ 
+);
+
+SELECT*FROM KI_CONSUMER_TABLE;
+
+
+----- BrilliantBritishCars.xlsr file
+USE DATABASE "DEMO";
+USE SCHEMA PUBLIC;
+Create or replace table KI_British
+(Invoice_Date string,
+ Make CHAR(20),
+ Country_Name CHAR(20),
+ Sale_Price string,
+ Cost_Price string,
+ Total_Discount string,
+ Delivery_Charge string,
+ Spare_Parts string,
+ Labor_Cost string,
+ Client_Name VARCHAR(100),
+ Model CHAR(15),
+ Color CHAR(25),
+ Reporting_Year int,
+ Reporting_Month int,
+ Registration_Date string,
+ Vehicle_Type CHAR(11),
+ Invoice_Number string,
+ Country_ISO_Code CHAR(4),
+ Outer_Postode CHAR(4),
+ Region VARCHAR(30) );
